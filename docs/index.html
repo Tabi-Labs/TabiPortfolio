@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tabi Games</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon/faviconV2.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!--Carrousel-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script src="./js/tinyi18n.js">
+        </script>
+        <script>
+          tinyi18n.loadTranslations('./assets/json/translation.json');
+        </script>
+        <script>
+            const characters = [
+              "hikari",
+              "kageyami",
+              "ikimaru",
+              "midoriha"
+            ];
+        
+            function select(index) {
+              const botones = document.querySelectorAll('.boton-imagen');
+              botones.forEach((btn, i) => {
+                btn.classList.toggle('seleccionado', i === index);
+              });
+              document.getElementById('character_name')
+                .setAttribute('data-translatekey', characters[index] + "_name");
+                document.getElementById('character_desc')
+                .setAttribute('data-translatekey', characters[index] + "_desc");
+            tinyi18n.refreshTexts();
+            }
+
+            function setLanguage(lang, clickedButton) {
+                tinyi18n.setLang(lang);
+
+                // Desactivar el botón pulsado
+                clickedButton.disabled = true;
+
+                // Activar el otro botón
+                const otherButtonId = clickedButton.id === 'btn-es' ? 'btn-en' : 'btn-es';
+                document.getElementById(otherButtonId).disabled = false;
+            }
+
+            window.onload = () => {
+                document.getElementById('btn-en').disabled = true;
+                select(0);
+            };
+          </script>
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"> 
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Tabi Games</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about" data-translatekey="about"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Super Ninja Deathmatch</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup" data-translatekey="contact"></a></li>
+                    </ul>
+                </div>
+                <div id="languageSelec">
+                    <input id="btn-es" onclick="setLanguage('es', this)" type="image" src="assets/spainIcon.png" />
+                    <input id="btn-en" onclick="setLanguage('en', this)" type="image" src="assets/united-kingdomIcon.png" />
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">TABI GAMES</h1>
+                        <div style="text-align: center;">
+                            <img class="img-fluid" src="assets/img/TabiLogo.png" alt="TABI Logo" />
+                        </div>
+                        <!-- <h2 class="text-blue mx-auto mt-2 mb-5">Creators of tasty games for you!</h2>-->
+                        <a class="btn btn-blue" href="#about" data-translatekey="letsgo"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4" data-translatekey="about_title"></h2>
+                        <p class="text-white-50" data-translatekey="about_desc"></p>>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container px-4">
+                <div class="team-row">
+                    <div class="col-1-5">
+                        <div class="teamMember">
+                            <img src="assets/img/DaniProfile.png" alt="...">
+                            <h3>Daniel Capilla</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="teamMember">
+                            <img src="assets/img/BautiProfile.png" alt="...">
+                            <h3>Juan Bautista Aballay</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="teamMember">
+                            <img src="assets/img/RubenProfile.png" alt="...">
+                            <h3>Ruben Zarapuz</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="teamMember">
+                            <img src="assets/img/SantiProfile.png" alt="...">
+                            <h3>Santiago Meneses</h3>
+                        </div>
+                    </div>
+                    <div class="col-1-5">
+                        <div class="teamMember">
+                            <img src="assets/img/AlexProfile.png" alt="...">
+                            <h3>Alejandro Antón</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container px-4">
+                <br><br><br>
+            </div>
+        </section>
+        
+        <!-- Projects-->
+        <section class="projects-section bg-gradient-sky" id="projects">
+            <div class="container px-4 px-lg-12">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-12 align-items-center">
+                    <div class="col-lg-12">
+                        <div class="featured-text text-center text-lg-center">
+                            <img class="img-fluid" src="assets/img/SND_Title.gif" alt="..." />
+                        </div>
+                        <br>
+                        <div class="featured-text text-center text-lg-center">
+                            <p class="text-black-100 font-size: 40 " data-translatekey="snd_desc"></p>
+                        </div>
+                        <br>
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/VaIODx4j4Zw?si=Kh5S2ab752U1_aFH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+
+
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="featured-text text-center text-lg-center">
+                        <h1 class="text-black mb-4" data-translatekey="character"></h1>
+                        <div class="botones">
+                            <img src="assets/img/sprite_yellow_portrait.gif" alt="Opción 1" class="boton-imagen" onclick="select(0)">
+                            <img src="assets/img/sprite_red_portrait.gif" alt="Opción 2" class="boton-imagen" onclick="select(1)">
+                            <img src="assets/img/sprite_blue_portrait.gif" alt="Opción 3" class="boton-imagen" onclick="select(2)">
+                            <img src="assets/img/sprite_green_portrait.gif" alt="Opción 4" class="boton-imagen" onclick="select(3)">
+                        </div>
+                        <br>
+                    </div>
+                    <!--<div class="col-lg-6"><img class="img-fluid" src="assets/img/caritauwu.png" alt="..." /></div>-->
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-center">
+                                    <h4 class="text-white" id="character_name" data-translatekey="hikari_name"></h4>
+                                    <br>
+                                    <p class="mb-0 text-white-50" id="character_desc" data-translatekey="hikari_desc"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- Project Three Row-->
+                <div class="featured-text text-center text-lg-center">
+                    <h1 class="text-black mb-4" data-translatekey="buffs_title"></h1>
+                    <p class="text-black-100 font-size: 40 " data-translatekey="buffs_desc"></p>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="w-25" src="assets/img/buff_gravity.png" alt="First slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_gravity_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_gravity_desc">
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img class="w-25" src="assets/img/buff_leaf.png" alt="Second slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_leaf_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_leaf_desc">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="w-25" src="assets/img/buff_numbness.png" alt="Third slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_numbness_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_numbness_desc">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="w-25" src="assets/img/buff_saw.png" alt="Fourth slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_saw_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_saw_desc">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="w-25" src="assets/img/buff_swiftness.png" alt="Fifth slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_swiftness_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_swiftness_desc">
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="w-25" src="assets/img/buff_last.png" alt="Sixth slide">
+                            <div class="mt-5">
+                                <h4 class="text-blue-stroke" data-translatekey="buffs_last_name"></h4>
+                                <p class="mb-0 text-blue-stroke" data-translatekey="buffs_last_desc">
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <br></br>
+                
+            </div>
+        </section>
+
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <img class="img-fluid" src="assets/img/favicon/favicon-96x96.png" alt="...">
+                        <br>
+                        <br>
+                        <h2 class="text-white mb-5" data-translatekey="contact_title"></h2>
+                        <p class="text-white mb-5" data-translatekey="contact_desc"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="assets/img_itchio.png" alt="...">
+                                <br>
+                                <br>
+                                <h4 class="text-uppercase m-0">itch.io</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://tabigames.itch.io/">TABI</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="assets/img_github.png" alt="...">
+                                <br>
+                                <br>
+                                <h4 class="text-uppercase m-0">GitHub</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://github.com/Tabi-Labs">Tabi-Labs</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="assets/img_yt.png" alt="...">
+                                <br>
+                                <br>
+                                <h4 class="text-uppercase m-0">YouTube</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://www.youtube.com/@TABIGameDev">TABI</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="assets/img_twitter.png" alt="...">
+                                <br>
+                                <br>
+                                <h4 class="text-uppercase m-0">Twitter/X</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://x.com/TabiGamedev">@TabiGamedev</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <img class="img-fluid" src="assets/img_instagram.png" alt="...">
+                                <br>
+                                <br>
+                                <h4 class="text-uppercase m-0">Instagram</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://www.instagram.com/tabi.games/">Tabi.Games</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="footer bg-black small text-center text-white-50">
+            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div class="container px-4 px-lg-5">Copyright &copy; Tabi Games 2025</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

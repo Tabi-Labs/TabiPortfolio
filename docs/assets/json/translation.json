@@ -1,0 +1,120 @@
+{
+    "default_language": "en",
+    "languages": [
+       "en",
+       "es"
+    ],
+    "translations": {
+       "home": {
+          "es": "Inicio",
+          "en": "Home"
+       },
+       "about": {
+          "es": "Sobre nosotros",
+          "en": "About us"
+       },
+       "resume": {
+          "es": "Trayectoria",
+          "en": "Resume"
+       },
+       "portfolio": {
+          "es": "Portfolio",
+          "en": "Portfolio"
+       },
+       "team": {
+          "es": "Nuestro equipo",
+          "en": "Our team"
+       },
+       "contact": {
+          "es": "Contacto",
+          "en": "Contact"
+       },"letsgo": {
+          "es": "¡Vamos allá!",
+          "en": "Let's Go!"
+       },"about_title": {
+          "es": "Sobre Tabi Games",
+          "en": "About Tabi Games"
+       },"about_desc": {
+          "es": "Somos un equipo de desarrollo de videojuegos español. Nuestro estudio está formado por estudiantes del Master en Informática Gráfica, Juegos y Realidad Virtual de la Universidad Rey juan Carlos. ¡Con mucha ilusión y esfuerzo pretendemos hacernos hueco en la industria! Puedes comprobarlo con nuestro actual proyecto <a href='https://tabigames.itch.io/super-ninja-deathmatch'>Super Ninja Deathmatch.</a> ¡Esperamos que disfrutéis tanto de jugarlo como nosotros de desarrollarlo!",
+          "en": "We are a videogame studio set in Spain. Our team is conformed by students of the Computer Graphics, Videogames and Virtual Reality Master's Degree from Universidad Rey Juan Carlos. With enthusiasm and willpower we are determinated to make our name big in the industry! You can see it in our current project <a href='https://tabigames.itch.io/super-ninja-deathmatch'>Super Ninja Deathmatch.</a> We hope you can have fun with the game as much as we enjoyed developing it!"
+       },"snd_desc": {
+         "es": "¡Un juego multijugador vertical, rápido y caótico, ideal para partidas entre colegas, tanto online como en el sofá!",
+         "en": "A vertical multiplayer game, fast and caothic, perfect to play with friends, whether it's online or in the couch!"
+      },"character": {
+         "es": "Conoce a los personajes",
+         "en": "Meet the characters"
+      },"hikari_name": {
+         "es": "Hikari",
+         "en": "Hikari"
+      },"hikari_desc": {
+         "es": "Siendo la heredera de la rama más débil del Clan Kironara, Hikari se ha dejado la piel por llegar a ser considerada la más fuerte de su Clan. A pesar de que muchos no la consideran merecedora de ser la representante en el torneo por su linaje, ella está decidida a demostrar lo equivocados que están.",
+         "en": "As the heir of the weakest branch of the Kironara Clan, Hikari has poured her heart and soul into being recognized as the strongest in her clan. Despite many not considering her worthy of representing them in the tournament due to her lineage, she is determined to prove them wrong."
+      },"kageyami_name": {
+         "es": "Kageyami",
+         "en": "Kageyami"
+      },"kageyami_desc": {
+         "es": "Kageyami era el menor de cuatro hermanos. Durante una misión en conjunto, sus hermanos mayores murieron siendo él el único en sobrevivir. Kageyami volvió marcado y no dijo ni una palabra sobre lo ocurrido en la misión. Desde entonces, no importa el objetivo se desenvuelve con una crueldad y violencia que deja estupefactos hasta a los ninjas más curtidos.",
+         "en": "Kageyami was the youngest of four brothers. During a joint mission, his older brothers died, and he was the only one to survive. Kageyami returned scarred and never said a word about what happened during the mission. Since then, no matter the objective, he carries out his tasks with a cruelty and violence that leaves even the most seasoned ninjas stunned."
+      },"midoriha_name": {
+         "es": "Midoriha",
+         "en": "Midoriha"
+      },"midoriha_desc": {
+         "es": "Midoriha es un hombre ya entrado en años, en su momento fue el ninja más temido de entre los clanes que no formaban el Escuadrón Kurosawa. Poco a poco el tiempo ha ido haciendo mella en él, viendo como las nuevas generaciones le alcanzan. Pero aún le queda una última batalla por librar en el torneo.",
+         "en": "Midoriha is a man well into his years; in his time, he was the most feared ninja among the clans that were not part of the Kurosawa Squadron. Over time, age has begun to take its toll, as he watches the younger generations catch up to him. But he still has one last battle to fight in the tournament."
+      },"ikimaru_name": {
+         "es": "Ikimaru",
+         "en": "Ikimaru"
+      },"ikimaru_desc": {
+         "es": "Hijo del actual patriarca del Clan Aoyama, Ikimaru ha demostrado desde su infancia un gran talento y disciplina para las artes ninja. Muchos en su entorno lo califican como un prodigio y esperan que sea él quién devuelva al clan a lo más alto.",
+         "en": "Son of the current patriarch of the Aoyama Clan, Ikimaru has shown great talent and discipline in the ninja arts since childhood. Many around him regard him as a prodigy and expect him to be the one who will return the clan to greatness."
+      },"buffs_title": {
+         "es": "Las Mejoras",
+         "en": "The Power-Ups"
+      },"buffs_desc": {
+         "es": "En combate podrás llevar tus habilidades al siguiente nivel con estas mejoras",
+         "en": "While in combat you will take your skills to the next level thanks to this power-ups"
+      },"buffs_gravity_name": {
+         "es": "Gravedad",
+         "en": "Gravity"
+      },"buffs_gravity_desc": {
+         "es": "Empuja todos los shurikens de tus enemigos hacia el suelo.",
+         "en": "Shove all your enemy shurikens to the ground."
+      },"buffs_leaf_name": {
+         "es": "Hoja Oculta",
+         "en": "Hidden Leaf"
+      },"buffs_leaf_desc": {
+         "es": "Sobrevive a un ataque letal y reaparace en otro lugar.",
+         "en": "Survive a lethal attack and reappear somewhere else."
+      },"buffs_numbness_name": {
+         "es": "Entumecimiento",
+         "en": "Numbness"
+      },"buffs_numbness_desc": {
+         "es": "Invierte los controles de movimientos de los enemigos.",
+         "en": "Invert enemy movement controls."
+      },"buffs_saw_name": {
+         "es": "Shuriken Sierra",
+         "en": "Saw Shuriken"
+      },"buffs_saw_desc": {
+         "es": "Tu próximo shuriken se une a una pared y la recorre por cierto tiempo, destruyendo todo a su paso.",
+         "en": "Your next shuriken attaches to a wall and follows the edge for a period of time, destroying everything in the way."
+      },"buffs_swiftness_name": {
+         "es": "Velocidad",
+         "en": "Switness"
+      },"buffs_swiftness_desc": {
+         "es": "Incrementa tu velocidad de movimiento temporalmente.",
+         "en": "Increases your movement speed temporarily."
+      },"buffs_last_name": {
+         "es": "Último Recurso",
+         "en": "Last Resource"
+      },"buffs_last_desc": {
+         "es": "Deja una nube de un gas letal donde aterrizas.",
+         "en": "Leave a tray of lethal gas where you land."
+      },"contact_title": {
+          "es": "Contacto",
+          "en": "Contact"
+       },"contact_desc": {
+          "es": "Si quieres ponerte en contacto con nosotros para algún tipo de oferta como si tan solo quieres estar atento a nuevos proyectos y actualizaciones, puedes seguirnos en nuestras redes sociales.",
+          "en": "In case you want to contact us because any kind of offer or business question or if you simply want to stay informed of future updates and projects you can follow us in our social networks."
+       }
+    }
+ }
